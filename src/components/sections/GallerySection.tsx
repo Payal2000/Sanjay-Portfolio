@@ -87,17 +87,17 @@ const GallerySection = () => {
   };
 
   return (
-    <section id="gallery" className="py-20 px-4 bg-background">
+    <section id="gallery" className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="heading-lg text-foreground mb-4">Bringing Your Vision to Life</h2>
-          <p className="body-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-light tracking-tight text-foreground mb-4">Bringing Your Vision to Life</h2>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8">
             A curated collection of moments captured through the lens, each telling a unique story.
           </p>
           <div className="flex justify-center">
@@ -108,10 +108,10 @@ const GallerySection = () => {
         </motion.div>
 
         <Tabs value={currentCategory} onValueChange={setCurrentCategory} className="w-full">
-          <TabsList className="grid w-full grid-cols-5 mb-12 bg-muted/50">
+          <TabsList className="grid w-full grid-cols-3 sm:grid-cols-5 mb-8 sm:mb-12 bg-muted/50 h-auto p-1">
             <TabsTrigger 
               value="all" 
-              className={`transition-colors ${
+              className={`transition-colors text-xs sm:text-sm py-2 px-2 sm:px-4 ${
                 currentCategory === "all" 
                   ? "bg-orange text-white" 
                   : "bg-transparent !text-gray-500 hover:!text-gray-700"
@@ -121,7 +121,7 @@ const GallerySection = () => {
             </TabsTrigger>
             <TabsTrigger 
               value="nature" 
-              className={`transition-colors ${
+              className={`transition-colors text-xs sm:text-sm py-2 px-2 sm:px-4 ${
                 currentCategory === "nature" 
                   ? "bg-orange text-white" 
                   : "bg-transparent !text-gray-500 hover:!text-gray-700"
@@ -131,7 +131,7 @@ const GallerySection = () => {
             </TabsTrigger>
             <TabsTrigger 
               value="portraits" 
-              className={`transition-colors ${
+              className={`transition-colors text-xs sm:text-sm py-2 px-2 sm:px-4 ${
                 currentCategory === "portraits" 
                   ? "bg-orange text-white" 
                   : "bg-transparent !text-gray-500 hover:!text-gray-700"
@@ -141,7 +141,7 @@ const GallerySection = () => {
             </TabsTrigger>
             <TabsTrigger 
               value="travel" 
-              className={`transition-colors ${
+              className={`transition-colors text-xs sm:text-sm py-2 px-2 sm:px-4 ${
                 currentCategory === "travel" 
                   ? "bg-orange text-white" 
                   : "bg-transparent !text-gray-500 hover:!text-gray-700"
@@ -151,7 +151,7 @@ const GallerySection = () => {
             </TabsTrigger>
             <TabsTrigger 
               value="street" 
-              className={`transition-colors ${
+              className={`transition-colors text-xs sm:text-sm py-2 px-2 sm:px-4 ${
                 currentCategory === "street" 
                   ? "bg-orange text-white" 
                   : "bg-transparent !text-gray-500 hover:!text-gray-700"
@@ -166,7 +166,7 @@ const GallerySection = () => {
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
             >
               <AnimatePresence>
                 {currentImages.map((image) => (
@@ -188,15 +188,15 @@ const GallerySection = () => {
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                           />
                         </div>
-                        <div className="p-6 bg-white">
-                          <h3 className="font-serif text-lg text-foreground mb-2">{image.title}</h3>
-                          <p className="text-sm text-muted-foreground capitalize mb-4">{image.category}</p>
+                        <div className="p-4 sm:p-6 bg-white">
+                          <h3 className="font-serif text-base sm:text-lg text-foreground mb-2">{image.title}</h3>
+                          <p className="text-xs sm:text-sm text-muted-foreground capitalize mb-3 sm:mb-4">{image.category}</p>
                           <div className="flex items-center justify-between">
-                            <div className="text-sm text-muted-foreground">
+                            <div className="text-xs sm:text-sm text-muted-foreground">
                               <span className="font-medium">Time:</span> 2-4 hours
                             </div>
-                            <button className="w-8 h-8 bg-orange rounded-full flex items-center justify-center text-white hover:bg-orange/90 transition-colors">
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <button className="w-6 h-6 sm:w-8 sm:h-8 bg-orange rounded-full flex items-center justify-center text-white hover:bg-orange/90 transition-colors">
+                              <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                               </svg>
                             </button>
@@ -218,26 +218,26 @@ const GallerySection = () => {
               <div className="relative w-full h-full flex items-center justify-center">
                 <button
                   onClick={closeLightbox}
-                  className="absolute top-4 right-4 z-10 text-white hover:text-primary transition-colors"
+                  className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 text-white hover:text-primary transition-colors"
                 >
-                  <X className="h-8 w-8" />
+                  <X className="h-6 w-6 sm:h-8 sm:w-8" />
                 </button>
                 
                 <button
                   onClick={() => navigateImage("prev")}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 text-white hover:text-primary transition-colors"
+                  className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-10 text-white hover:text-primary transition-colors"
                 >
-                  <ChevronLeft className="h-8 w-8" />
+                  <ChevronLeft className="h-6 w-6 sm:h-8 sm:w-8" />
                 </button>
                 
                 <button
                   onClick={() => navigateImage("next")}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 text-white hover:text-primary transition-colors"
+                  className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-10 text-white hover:text-primary transition-colors"
                 >
-                  <ChevronRight className="h-8 w-8" />
+                  <ChevronRight className="h-6 w-6 sm:h-8 sm:w-8" />
                 </button>
 
-                <div className="relative w-full h-full flex items-center justify-center p-8">
+                <div className="relative w-full h-full flex items-center justify-center p-4 sm:p-8">
                   {(() => {
                     const image = currentImages.find(img => img.id === selectedImage);
                     if (!image) return null;
@@ -258,9 +258,9 @@ const GallerySection = () => {
                           height={800}
                           className="object-contain max-w-full max-h-full"
                         />
-                        <div className="absolute bottom-4 left-4 text-white">
-                          <h3 className="font-serif text-xl mb-1">{image.title}</h3>
-                          <p className="text-sm opacity-90 capitalize">{image.category}</p>
+                        <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 text-white">
+                          <h3 className="font-serif text-lg sm:text-xl mb-1">{image.title}</h3>
+                          <p className="text-xs sm:text-sm opacity-90 capitalize">{image.category}</p>
                         </div>
                       </motion.div>
                     );
