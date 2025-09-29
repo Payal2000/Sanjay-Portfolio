@@ -43,7 +43,7 @@ const ContactSection = () => {
       console.log("Form data:", data);
       setSubmitStatus("success");
       form.reset();
-    } catch (error) {
+    } catch {
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -119,7 +119,7 @@ const ContactSection = () => {
         >
           <h2 className="heading-lg text-foreground mb-4">Get In Touch</h2>
           <p className="body-lg text-muted-foreground max-w-2xl mx-auto">
-            Let's collaborate to bring your vision to life through the power of photography.
+            Let&apos;s collaborate to bring your vision to life through the power of photography.
           </p>
         </motion.div>
 
@@ -135,7 +135,7 @@ const ContactSection = () => {
             <div>
               <h3 className="heading-md text-foreground mb-4">Send a Message</h3>
               <p className="body-md text-muted-foreground mb-8">
-                Ready to start your next project? I'd love to hear from you.
+                Ready to start your next project? I&apos;d love to hear from you.
               </p>
             </div>
 

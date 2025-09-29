@@ -21,21 +21,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sanjay S. Agaonkar | Photographer & Visual Storyteller",
-  description: "Premium photography portfolio showcasing nature, portraits, travel, and street photography by Sanjay S. Agaonkar. Visual storytelling through the lens.",
+  title: "Sanjay S Nagaonkar | Photographer & Visual Storyteller",
+  description: "Premium photography portfolio showcasing nature, portraits, travel, and street photography by Sanjay S Nagaonkar. Visual storytelling through the lens.",
   keywords: ["photography", "portfolio", "visual storytelling", "nature photography", "portrait photography", "travel photography", "street photography"],
-  authors: [{ name: "Sanjay S. Agaonkar" }],
-  creator: "Sanjay S. Agaonkar",
+  authors: [{ name: "Sanjay S Nagaonkar" }],
+  creator: "Sanjay S Nagaonkar",
   openGraph: {
-    title: "Sanjay S. Agaonkar | Photographer & Visual Storyteller",
-    description: "Premium photography portfolio showcasing nature, portraits, travel, and street photography by Sanjay S. Agaonkar.",
+    title: "Sanjay S Nagaonkar | Photographer & Visual Storyteller",
+    description: "Premium photography portfolio showcasing nature, portraits, travel, and street photography by Sanjay S Nagaonkar.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sanjay S. Agaonkar | Photographer & Visual Storyteller",
-    description: "Premium photography portfolio showcasing nature, portraits, travel, and street photography by Sanjay S. Agaonkar.",
+    title: "Sanjay S Nagaonkar | Photographer & Visual Storyteller",
+    description: "Premium photography portfolio showcasing nature, portraits, travel, and street photography by Sanjay S Nagaonkar.",
   },
   robots: {
     index: true,

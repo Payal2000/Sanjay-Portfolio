@@ -91,7 +91,7 @@ const AboutSection = () => {
                 Based in the heart of creative inspiration, I believe that photography is 
                 not just about capturing what you see, but about revealing what you feel. 
                 Every project is approached with meticulous attention to detail and a deep 
-                respect for the subject's narrative.
+                respect for the subject&apos;s narrative.
               </p>
               
               <p className="body-md text-muted-foreground leading-relaxed">
